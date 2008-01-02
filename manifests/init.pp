@@ -17,6 +17,10 @@ class vim {
                         default => '',
                 },
                 ensure => present,
+		source => $operatingsystem ? {
+			openbsd => 'ftp://mirror.switch.ch/pub/OpenBSD/4.2/packages/i386/vim-7.1.33-no_x11.tgz',
+			default => '',
+		},
         }
 }
 
