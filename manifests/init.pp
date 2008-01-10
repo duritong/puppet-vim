@@ -2,7 +2,7 @@
 # Copyright (C) 2007 admin@immerda.ch
 #
 
-#modules_dir { "vim": }
+modules_dir { "vim": }
 
 class vim {
 
@@ -11,7 +11,6 @@ class vim {
                         centos => vim-enhanced,
                         default => vim,
                 },
-                alias => vim,
                 category => $operatingsystem ? {
                         gentoo => 'app-editors',
                         default => '',
