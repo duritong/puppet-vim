@@ -24,7 +24,7 @@ class vim::centos inherits vim::base {
     Package[vim]{
         name => vim-enhanced,
     }
-    Package[vim-minimal]{
+    package{vim-minimal:
         ensure => present,
     }
 }
