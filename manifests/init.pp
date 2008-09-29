@@ -36,7 +36,7 @@ class vim::gentoo inherits vim::base {
 
 class vim::openbsd inherits vim::base {
     Package[vim]{
-		source => 'ftp://mirror.switch.ch/pub/OpenBSD/4.2/packages/i386/vim-7.1.33-no_x11.tgz',
+        ensure => present,
     }
 }
 
