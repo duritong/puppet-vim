@@ -35,8 +35,6 @@ class vim::gentoo inherits vim::base {
 }
 
 class vim::openbsd inherits vim::base {
-    Package[vim]{
-        ensure => present,
-    }
+    openbsd::special_package{'vim-7.1.244p0-no_x11': }
 }
 
