@@ -3,8 +3,6 @@
 # GPLv3
 #
 
-#modules_dir { "vim": }
-
 class vim {
     case $operatingsystem {
         openbsd: { include vim::openbsd }
@@ -13,28 +11,3 @@ class vim {
         default: { include vim::base }
     } 
 }
-
-class vim::base {
-    package { 'vim':
-        ensure => present,
-    }    
-}
-
-class vim::centos inherits vim::base {
-    Package[vim]{
-        name => vim-enhanced,
-    }
-    package{vim-minimal:
-        ensure => present,
-    }
-}
-class vim::gentoo inherits vim::base {
-    Package[vim]{
-        category => 'app-editors',
-    }
-}
-
-class vim::openbsd {
-    openbsd::special_package{'vim-7.1.244p0-no_x11': }
-}
-
