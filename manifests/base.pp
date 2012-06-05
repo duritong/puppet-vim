@@ -1,5 +1,5 @@
 class vim::base {
-    package { 'vim':
-        ensure => present,
-    }    
+  package { 'vim':
+    ensure => present,
+  }    
 }

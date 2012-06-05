@@ -4,10 +4,10 @@
 #
 
 class vim {
-    case $operatingsystem {
-        openbsd: { include vim::openbsd }
-        gentoo: { include vim::gentoo }
-        centos: { include vim::centos }
-        default: { include vim::base }
-    } 
+  case $::operatingsystem {
+    openbsd: { include vim::openbsd }
+    gentoo: { include vim::gentoo }
+    centos: { include vim::centos }
+    default: { include vim::base }
+  } 
 }
