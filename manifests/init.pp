@@ -8,6 +8,7 @@ class vim {
     openbsd: { include vim::openbsd }
     gentoo: { include vim::gentoo }
     centos: { include vim::centos }
+    amazon: { include vim::centos }
     default: { include vim::base }
   } 
 }
